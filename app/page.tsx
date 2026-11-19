@@ -12,6 +12,8 @@ import {
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
+import Image from "next/image";
+import Footer from "./components/Footer";
 
 // Brand Color Palette extracted from Genius Ideas Logo:
 // Primary Black: #000000
@@ -195,10 +197,7 @@ export default function GeniusIdeasLandingPage() {
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
             <a href="#" className="flex items-center gap-2.5 group">
-              <GeniusIdeasLogo className="w-8 h-9 transition-transform duration-200 group-hover:scale-105" />
-              <span className="font-black text-lg tracking-tighter uppercase">
-                GENIUS<span className="text-[#0D8A8A]">IDEAS</span>
-              </span>
+              <GeniusIdeasLogo className="w-18 h-19 transition-transform duration-200 group-hover:scale-105" />
             </a>
           </div>
 
@@ -296,7 +295,7 @@ export default function GeniusIdeasLandingPage() {
       {/* 3. FULL-BLEED ADIDAS-STYLE HERO SECTION */}
       <section className="relative w-full h-[78vh] min-h-[540px] max-h-[820px] bg-black overflow-hidden">
         {/* Background Visual */}
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1800&q=85"
           alt="Genius Ideas Streetwear Collection"
           className="w-full h-full object-cover object-center opacity-70"
@@ -391,7 +390,7 @@ export default function GeniusIdeasLandingPage() {
             >
               {/* Image Container */}
               <div className="relative aspect-[4/5] bg-[#F4F6F6] overflow-hidden">
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
@@ -693,109 +692,7 @@ export default function GeniusIdeasLandingPage() {
       </section>
 
       {/* 8. ADIDAS-STYLE DARK FOOTER */}
-      <footer className="bg-black text-white pt-14 pb-10 px-4 md:px-12 border-t border-white/15">
-        <div className="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 pb-12 border-b border-white/15">
-          <div>
-            <h5 className="text-xs font-black uppercase tracking-[0.15em] mb-4">
-              PRODUCTS
-            </h5>
-            <ul className="space-y-2.5 text-xs text-neutral-400">
-              <li>
-                <a href="#catalog" className="hover:text-white">
-                  T-Shirts
-                </a>
-              </li>
-              <li>
-                <a href="#catalog" className="hover:text-white">
-                  Hoodies &amp; Sweatshirts
-                </a>
-              </li>
-              <li>
-                <a href="#catalog" className="hover:text-white">
-                  Caps
-                </a>
-              </li>
-              <li>
-                <a href="#catalog" className="hover:text-white">
-                  Phone Cases
-                </a>
-              </li>
-              <li>
-                <a href="#catalog" className="hover:text-white">
-                  Framed Wall Art
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="text-xs font-black uppercase tracking-[0.15em] mb-4">
-              AGENCY SERVICES
-            </h5>
-            <ul className="space-y-2.5 text-xs text-neutral-400">
-              <li>
-                <a href="#agency" className="hover:text-white">
-                  Departmental &amp; Campus Merch
-                </a>
-              </li>
-              <li>
-                <a href="#agency" className="hover:text-white">
-                  Corporate &amp; Event Apparel
-                </a>
-              </li>
-              <li>
-                <a href="#engine" className="hover:text-white">
-                  30-Day Content &amp; Sales Engine
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="text-xs font-black uppercase tracking-[0.15em] mb-4">
-              PRICING TIERS
-            </h5>
-            <ul className="space-y-2.5 text-xs text-neutral-400">
-              <li>Basic Tee — ₦10,000</li>
-              <li>Standard Tee — ₦20,000</li>
-              <li>Premium Tee — ₦30,000</li>
-              <li>Bulk Custom Quotes</li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="text-xs font-black uppercase tracking-[0.15em] mb-4">
-              GENIUS IDEAS
-            </h5>
-            <p className="text-xs text-neutral-400 leading-relaxed">
-              Premium Merchandise Agency &amp; Creative Studio.
-            </p>
-            <div className="mt-4 flex items-center gap-2">
-              <GeniusIdeasLogo className="w-7 h-8" />
-              <span className="font-black text-sm tracking-tight uppercase">
-                GENIUS<span className="text-[#0D8A8A]">IDEAS</span>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div className="max-w-[1440px] mx-auto pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-neutral-500">
-          <p>
-            &copy; {new Date().getFullYear()} Genius Ideas. All rights reserved.
-          </p>
-          <div className="flex gap-6 uppercase tracking-wider">
-            <a href="#pricing" className="hover:text-white">
-              Terms
-            </a>
-            <a href="#agency" className="hover:text-white">
-              Bulk Policy
-            </a>
-            <a href="mailto:kingsani04@gmail.com" className="hover:text-white">
-              Contact
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
