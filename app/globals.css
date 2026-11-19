@@ -14,9 +14,6 @@
 }
 
 /* Takashi Japan exclusively for h1 */
-h2 {
-  font-family: var(--font-takashi);
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
