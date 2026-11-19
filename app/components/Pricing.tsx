@@ -8,10 +8,7 @@ export default function Pricing() {
     >
       <div className="max-w-360 mx-auto">
         <div className="mb-10">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#0D8A8A]">
-            TRANSPARENT RETAIL TIERS
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mt-1">
+          <h2 className="text-3xl md:text-4xl font-black font-custom uppercase tracking-tight mt-1">
             BUILT FOR EVERY GRADE OF WEAR
           </h2>
         </div>

@@ -1,15 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Roboto } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { StoreProvider } from "./context/StoreContext";
 
-const myFont = localFont({
-  src: "./myfont.ttf",
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
 });
-const myFont2 = localFont({
-  src: "./myfont2.ttf",
+
+const takashi = localFont({
+  src: [
+    {
+      path: "./fonts/myfont.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/myfont2.ttf",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+  variable: "--font-takashi",
 });
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,9 +45,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${myFont.className} ${myFont2.className} h-full antialiased`}
+      className={`${roboto.variable} ${takashi.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex font-sans antialiased flex-col">
         <StoreProvider>{children}</StoreProvider>
       </body>
     </html>

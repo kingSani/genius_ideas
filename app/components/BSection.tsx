@@ -5,10 +5,7 @@ export default function BSection() {
     <section id="agency" className="bg-black text-white py-20 px-4 md:px-12">
       <div className="max-w-360 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-6 space-y-6">
-          <span className="inline-block bg-[#0D8A8A] text-white text-xs font-black tracking-[0.2em] uppercase px-3 py-1">
-            B2B &amp; INSTITUTIONAL MERCHANDISE
-          </span>
-          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight leading-[1.02]">
+          <h2 className="text-4xl  md:text-5xl font-black uppercase tracking-tight leading-[1.02]">
             OUTFIT YOUR DEPARTMENT, CONVENTION, OR BRAND.
           </h2>
           <p className="text-neutral-300 text-sm md:text-base leading-relaxed">
@@ -19,33 +16,43 @@ export default function BSection() {
           </p>
 
           {/* 4-Phase Workflow */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+          <div className="pt-4 divide-y divide-white/15 border-y border-white/15">
             {[
               {
-                step: "01 / LOCK BRIEF",
+                num: "01",
+                title: "LOCK BRIEF",
                 desc: "Define quantities, sizes, and lock your pre-production slot.",
               },
               {
-                step: "02 / VISUAL MOCKUPS",
+                num: "02",
+                title: "VISUAL MOCKUPS",
                 desc: "Receive tailored apparel mockups ready for your team campaign.",
               },
               {
-                step: "03 / BATCH PRODUCTION",
+                num: "03",
+                title: "BATCH PRODUCTION",
                 desc: "Precision blank sourcing and quality-controlled print runs.",
               },
               {
-                step: "04 / DIRECT HANDOVER",
+                num: "04",
+                title: "DIRECT HANDOVER",
                 desc: "Sorted, packaged, and delivered on deadline.",
               },
             ].map((phase) => (
               <div
-                key={phase.step}
-                className="border border-white/20 p-4 bg-white/3"
+                key={phase.num}
+                className="py-4 grid grid-cols-1 sm:grid-cols-12 gap-1.5 sm:gap-4 items-baseline"
               >
-                <p className="text-xs font-black tracking-widest text-[#0D8A8A]">
-                  {phase.step}
-                </p>
-                <p className="text-xs text-neutral-300 mt-1.5 leading-relaxed">
+                <div className="sm:col-span-5 flex items-baseline gap-3">
+                  <span className="font-mono text-xs text-[#0D8A8A] shrink-0">
+                    {phase.num}
+                  </span>
+                  <span className="text-xs font-black tracking-widest text-white">
+                    {phase.title}
+                  </span>
+                </div>
+                {/* pl-7 aligns the description under the title on mobile, then resets on desktop */}
+                <p className="pl-7 sm:pl-0 sm:col-span-7 text-xs text-neutral-300 leading-relaxed">
                   {phase.desc}
                 </p>
               </div>

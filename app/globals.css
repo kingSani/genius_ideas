@@ -8,9 +8,14 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
 
-  --font-custom: var(--font-custom), sans-serif;
+  --font-sans: var(--font-roboto), sans-serif;
+  --font-custom: var(--font-takashi);
+}
+
+/* Takashi Japan exclusively for h1 */
+h2 {
+  font-family: var(--font-takashi);
 }
 
 @media (prefers-color-scheme: dark) {

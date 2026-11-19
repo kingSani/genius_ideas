@@ -18,13 +18,14 @@ export default function Hero() {
 
       {/* Hero Copy Overlay (Bottom-Left Architectural Placement) */}
       <div className="absolute inset-0 max-w-360 mx-auto px-4 md:px-12 pb-14 md:pb-20 flex flex-col justify-end items-start">
-        <span className="inline-block bg-[#0D8A8A] text-white text-xs font-black tracking-[0.2em] uppercase px-3 py-1 mb-4">
-          GENIUS IDEAS ORIGINALS
-        </span>
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white uppercase tracking-tight leading-[0.95] max-w-3xl">
-          WEAR THE IDEA. <br />
-          OWN THE STANDARD.
+        <h1 className="text-4xl sm:text-6xl font-custom md:text-7xl font-black text-white uppercase tracking-tight leading-[0.95] max-w-5xl">
+          WEAR THE IDEA
         </h1>
+        <h2 className="text-2xl sm:text-6xl md:pt-10 md:text-5xl font-custom font-black text-white uppercase tracking-tight leading-[0.95] max-w-3xl">
+          {" "}
+          OWN THE STANDARD
+        </h2>
+
         <p className="text-neutral-200 text-sm md:text-base max-w-xl mt-4 font-normal leading-relaxed">
           Precision-printed heavyweight tees, hoodies, caps, and custom
           merchandise engineered for creators, departments, and bold brands.

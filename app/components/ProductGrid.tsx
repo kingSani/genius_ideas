@@ -13,10 +13,7 @@ export default function ProductGrid() {
     <section id="catalog" className="max-w-360 mx-auto px-4 md:px-12 py-16">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
         <div>
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#0D8A8A] mb-1">
-            CURATED SHOWCASE
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight">
+          <h2 className="text-3xl font-custom md:text-4xl font-black uppercase tracking-tight">
             THE MERCHANDISE LINEUP
           </h2>
         </div>

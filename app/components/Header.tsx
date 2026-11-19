@@ -21,9 +21,6 @@ export default function Header() {
         <a href="#pricing" className="hover:underline">
           Pricing Tiers
         </a>
-        <a href="#engine" className="hover:underline">
-          30-Day Content Engine
-        </a>
       </div>
 
       {/* Main Nav Bar */}
@@ -37,13 +34,14 @@ export default function Header() {
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+
           <a href="#" className="flex items-center gap-2.5 group">
             <GeniusIdeasLogo className="w-18 h-19 transition-transform duration-200 group-hover:scale-105" />
           </a>
         </div>
 
-        {/* Center: Bold Uppercase Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-7 text-xs font-extrabold tracking-[0.12em] uppercase">
+        {/* Center: Main Navigation */}
+        <nav className="hidden lg:flex items-center gap-7 text-xs font-custom tracking-[0.08em] uppercase">
           <a
             href="#catalog"
             onClick={() => setActiveCategory("T-SHIRTS")}
@@ -117,7 +115,7 @@ export default function Header() {
                 setActiveCategory(cat);
                 setMobileMenuOpen(false);
               }}
-              className="block text-sm font-black tracking-wider uppercase py-1 border-b border-neutral-100"
+              className="block text-sm font-custom tracking-wider uppercase py-1 border-b border-neutral-100"
             >
               {cat}
             </a>
@@ -125,7 +123,7 @@ export default function Header() {
           <a
             href="#agency"
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-sm font-black tracking-wider uppercase text-[#0D8A8A] pt-2"
+            className="block text-sm font-custom tracking-wider uppercase text-[#0D8A8A] pt-2"
           >
             B2B BULK MERCH PIPELINE &rarr;
           </a>
